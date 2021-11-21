@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block  content %}
+<h1 style="text-align:center"> Dynamic Urls </h1>
+<a style="margin-right:10px" href=""> Home  </a>
+<a style="margin-right:10px" href="{% url 'dynamicurl:profile'  1 %}"> Student 1 </a>
+<a style="margin-right:10px" href="{% url 'dynamicurl:profile'  2 %}"> Student 2 </a>
+<a style="margin-right:10px" href="{% url 'dynamicurl:profile'  3 %}"> Student 3 </a>
+
+
+<br/><br/><br/><br/>
+<a href=""> Go Back Home  </a>
+
+{% endblock  %}
