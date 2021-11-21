@@ -22,5 +22,6 @@ urlpatterns = [
     path("dynamicurl/" , include(("dynamicurl.urls" , "dynamicurl") , namespace="dynamicurl")),
     path("form/" , include(("form.urls" , "form") , namespace="form")),
     path("authenticate/" , include(("authenticate.urls" , "authenticate") , namespace="authenticate")),
-
+    path("cookiesession/" , include(("cookiesession.urls" , "cookiesession") , namespace="cookiesession")),
 ]
+

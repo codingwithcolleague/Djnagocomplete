@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "dynamicurl",
     "form",
-    "authenticate"
+    "authenticate",
+    "cookiesession"
 ]
 
 MIDDLEWARE = [
