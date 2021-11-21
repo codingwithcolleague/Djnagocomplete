@@ -1,8 +1,8 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from .form import Registration,SignUpForm
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import AuthenticationForm,SetPasswordForm,PasswordChangeForm
+from django.contrib.auth import authenticate, login, logout,update_session_auth_hash
 # Create your views here.
 
 def userRegistration(request):
@@ -59,3 +59,37 @@ def userlogin(request):
 def userlogout(request):
     logout(request)
     return HttpResponse("Logout Succesfully")
+
+
+
+def changeUserPassword(request):
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            fm = PasswordChangeForm(user=request.user,data=request.POST)
+            if fm.is_valid():
+                fm.save()
+                update_session_auth_hash(request,fm.user)
+                return HttpResponse("Password Reset Successfully")
+            return render(request,"userregistration.html",{"form":fm})
+        else:
+            fm = PasswordChangeForm(user=request.user)
+            return render(request,"userregistration.html",{"form":fm})
+    else:
+        return HttpResponse("Password Try To Login")
+
+
+
+def changeUserPasswordWithoutold(request):
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            fm = SetPasswordForm(user=request.user,data=request.POST)
+            if fm.is_valid():
+                fm.save()
+                update_session_auth_hash(request,fm.user)
+                return HttpResponse("Password Reset Successfully")
+            return render(request,"userregistration.html",{"form":fm})
+        else:
+            fm = SetPasswordForm(user=request.user)
+            return render(request,"userregistration.html",{"form":fm})
+    else:
+        return HttpResponse("Password Try To Login")
