@@ -5,6 +5,5 @@ from .views import insertuser,insertuserForm
 
 urlpatterns = [
     path('' , insertuser , name="create"),
-    path('createform/' , insertuserForm , name="createusingform")    
-
+    path('createform/' , insertuserForm , name="createusingform")
 ]
