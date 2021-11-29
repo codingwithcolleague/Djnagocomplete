@@ -33,8 +33,11 @@ def getSession(request):
     # request.session.keys()
     # request.session.items()
     # request.session.setdefault("age",24)
+    request.session.modified = True #while working and session time will increate of data will change
     return render(request,"cookiesession/createcookie.html" , {"session" : name})
 
 def delSession(request):
     del request.session["name"]
+    # request.session.flush()
+    # request.session.clear_expired()
     return render(request,"cookiesession/createcookie.html" , {"session" : "yes"})

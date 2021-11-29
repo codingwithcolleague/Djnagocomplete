@@ -10,6 +10,11 @@
 
 {% if session %}
     {{ session }}
+    {{request.session.get_session_cookie_age }}
+    {{request.session.get_expiry_age }}
+    {{request.session.get_expiry_date }}
+    {{request.session.get_expiry_at_browser }}
+
 {% endif %}
 
 {% endblock  %}
