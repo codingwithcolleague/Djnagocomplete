@@ -23,5 +23,7 @@ urlpatterns = [
     path("form/" , include(("form.urls" , "form") , namespace="form")),
     path("authenticate/" , include(("authenticate.urls" , "authenticate") , namespace="authenticate")),
     path("cookiesession/" , include(("cookiesession.urls" , "cookiesession") , namespace="cookiesession")),
+    path("cacheapp/" , include(("cacheapp.urls" , "cacheapp") , namespace="cacheapp")),
+
 ]
 
