@@ -135,7 +135,7 @@ SESSION_FILE_PATH = os.path.join(BASE_DIR , "session")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CACHE_MIDDLEWARE_SECOUND =20
+# CACHE_MIDDLEWARE_SECOUND =20
 
 #Database Cache
 # CACHES = {
