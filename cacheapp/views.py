@@ -9,3 +9,6 @@ def home(request):
 
 def contact(request):
     return render(request,"cacheapp/home.html")
+
+def check(request):
+    return render(request,"cacheapp/check.html")

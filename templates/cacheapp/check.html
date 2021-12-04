@@ -1,0 +1,19 @@
+{% load cache %}
+
+<html>
+    <head> 
+        <title> Home </title>
+    </head>
+
+<body>
+    <h1> Check 1  </h1>
+    <h1> Check 2  </h1>
+    {% cache 30 course %}
+    <h1> Check 31  </h1>
+    <h1> Check 4  </h1>
+    {% endcache  %}
+    <h1> Check 5  </h1>
+
+</body>
+
+</html>
