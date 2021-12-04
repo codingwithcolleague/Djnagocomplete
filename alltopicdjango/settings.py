@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "dynamicurl",
     "form",
     "authenticate",
-    "cookiesession"
+    "cookiesession",
+    "signaltask"
 ]
 
 MIDDLEWARE = [
