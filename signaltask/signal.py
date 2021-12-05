@@ -94,7 +94,7 @@ def at_ending_delete(sender,instance,**kwargs):
 
 # post_delete.connect(at_ending_delete , sender=User)
 
-@receiver(pre_init, sender=User)
+# @receiver(pre_init, sender=User)
 def at_begining_init(sender,*args,**kwargs):
     print("-----------------")
     print("pre init")
@@ -105,7 +105,7 @@ def at_begining_init(sender,*args,**kwargs):
 # pre_init.connect(at_begining_init , sender=User)
 
 
-@receiver(post_init, sender=User)
+# @receiver(post_init, sender=User)
 def at_ending_init(sender,*args,**kwargs):
     print("-----------------")
     print("pre init")
@@ -116,7 +116,7 @@ def at_ending_init(sender,*args,**kwargs):
 # pre_init.connect(at_ending_init , sender=User)
 
 
-@receiver(request_started)
+# @receiver(request_started)
 def at_begining_request(sender,environ,**kwargs):
     print("-----------------")
     print("At begining Request")
@@ -124,7 +124,7 @@ def at_begining_request(sender,environ,**kwargs):
     print("environ" ,environ)
     print("Kwargs" , kwargs)
 
-@receiver(request_finished)
+# @receiver(request_finished)
 def at_ending_request(sender,**kwargs):
     print("-----------------")
     print("At ending Request")
@@ -132,7 +132,7 @@ def at_ending_request(sender,**kwargs):
     print("Kwargs" , kwargs)
 
 
-@receiver(got_request_exception)
+# @receiver(got_request_exception)
 def at_request_exception(sender,request,**kwargs):
     print("-----------------")
     print("At Request Exception")

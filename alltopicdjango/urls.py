@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
+from signaltask.views import homee
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,6 +25,7 @@ urlpatterns = [
     path("authenticate/" , include(("authenticate.urls" , "authenticate") , namespace="authenticate")),
     path("cookiesession/" , include(("cookiesession.urls" , "cookiesession") , namespace="cookiesession")),
     path("cacheapp/" , include(("cacheapp.urls" , "cacheapp") , namespace="cacheapp")),
+    path("customesignal/" , homee ),
 
 ]
 
