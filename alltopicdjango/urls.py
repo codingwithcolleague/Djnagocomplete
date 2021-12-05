@@ -26,6 +26,7 @@ urlpatterns = [
     path("cookiesession/" , include(("cookiesession.urls" , "cookiesession") , namespace="cookiesession")),
     path("cacheapp/" , include(("cacheapp.urls" , "cacheapp") , namespace="cacheapp")),
     path("customesignal/" , homee ),
+    path("middlewarecheck/" , include(("middlewarecheck.urls" , "middlewarecheck") , namespace="middlewarecheck")),
 
 ]
 

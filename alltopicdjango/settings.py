@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "form",
     "authenticate",
     "cookiesession",
-    "signaltask"
+    "signaltask",
+    "middlewarecheck"
 ]
 
 MIDDLEWARE = [
@@ -55,6 +56,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'middlewarecheck.middleware.BrotherMiddleware',
+    # 'middlewarecheck.middleware.MotherMiddleware',
+    # 'middlewarecheck.middleware.MyProcessMiddleware',
+    'middlewarecheck.middleware.MyTeamplateClassMiddleware'
+
 ]
 
 ROOT_URLCONF = 'alltopicdjango.urls'
