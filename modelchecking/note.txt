@@ -1,0 +1,12 @@
+
+In [9]: from django.utils import timezone
+
+In [10]: s= Student.objects.create(  name='Sonu' ,  roll=20 , city='Dhanabad' , marks=200, pass_date_time=timezone.now() , pass_date=timezone.now()  )
+
+In [11]: s= Student.objects.create(  name='Sonu' ,  roll=21 , city='Dhanabad' , marks=301, pass_date_time=timezone.now() , pass_date=timezone.now()  )
+
+In [12]: s= Student.objects.create(  name='Ram' ,  roll=41 , city='Dhanabad' , marks=401, pass_date_time=timezone.now() , pass_date=timezone.now()  )
+
+In [13]: s= Student.objects.create(  name='Rajan' ,  roll=51 , city='Dhanabad' , marks=501, pass_date_time=timezone.now() , pass_date=timezone.now()  )
+
+In [14]: s= Student.objects.create(  name='Ravi' ,  roll=61 , city='Dhanabad' , marks=601, pass_date_time=timezone.now() , pass_date=timezone.now()  )

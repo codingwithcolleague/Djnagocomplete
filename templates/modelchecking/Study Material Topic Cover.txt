@@ -1,0 +1,9 @@
+anagular
+numpy
+panda
+sql
+rest api
+package
+aws
+javascript
+css

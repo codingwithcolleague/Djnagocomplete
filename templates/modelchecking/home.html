@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style>
+     table, th , td {
+        border:1px solid
+    } 
+</style>
+<body>
+
+<h2>Student Records</h2>
+<h4> Query </h4>
+
+<p>    {{ students.query }}   </p>
+
+<table width="60%" style="margin:auto" >
+    <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>city</th>
+        <th>marks</th>
+        <th>Date Time</th>
+        <th>Passed Date</th>
+
+    </tr>
+  {% for student in students %}
+
+    <tr>
+        <td>{{  student.name }}</td>
+        <td>{{  student.roll }}</td>
+        <td>{{  student.city }}</td>
+        <td>{{  student.marks }}</td>
+        <td>{{  student.pass_date_time }}</td>
+        <td>{{  student.pass_date }}</td>
+        
+    </tr>
+    {% endfor %} 
+</table>
+
+
+<table width="60%" style="margin:auto" >
+    <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>city</th>
+        <th>marks</th>
+        <th>Date Time</th>
+        <th>Passed Date</th>
+
+    </tr>
+
+    <tr>
+        <td>{{  student.name }}</td>
+        <td>{{  student.roll }}</td>
+        <td>{{  student.city }}</td>
+        <td>{{  student.marks }}</td>
+        <td>{{  student.pass_date_time }}</td>
+        <td>{{  student.pass_date }}</td>
+        
+    </tr>
+    
+</table>
+
+
+
+</body>
+</html>
+

@@ -27,6 +27,7 @@ urlpatterns = [
     path("cacheapp/" , include(("cacheapp.urls" , "cacheapp") , namespace="cacheapp")),
     path("customesignal/" , homee ),
     path("middlewarecheck/" , include(("middlewarecheck.urls" , "middlewarecheck") , namespace="middlewarecheck")),
+    path("modelchecking/" , include(("modelchecking.urls" , "modelchecking") , namespace="modelchecking")),
 
 ]
 
