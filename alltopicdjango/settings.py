@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "modelchecking",
     "modelinheritanceconcept",
     "modelmanagerconcept",
+    "modelrelationship"
 ]
 
 MIDDLEWARE = [
