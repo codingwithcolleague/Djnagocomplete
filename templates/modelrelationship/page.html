@@ -1,0 +1,70 @@
+<style>
+    table,td,th {
+        border:1px solid
+    }
+</style>
+
+<table>
+    <tr>
+        <h3> Page All Data </h3>
+        <th> Page Name </th>
+        <th> Page Category </th>
+        <th> Published Date </th>
+        <th> Created By </th>
+    </tr>
+    
+    {% for dt1 in data1 %}
+    <tr>
+        <td>  {{ dt1.page_name }}  </td>
+        <td>  {{ dt1.page_cat }}  </td>
+            <td>  {{  dt1.page_publish  }}  </td>
+        <td>  {{  dt1.user.username  }}  </td>
+
+    </tr>
+    {% endfor %}
+    
+    </table>
+
+    
+<table>
+    <tr>
+        <h3> Page by User Email </h3>
+        <th> Page Name </th>
+        <th> Page Category </th>
+        <th> Published Date </th>
+        <th> Created By </th>
+    </tr>
+    
+    {% for dt1 in data2 %}
+    <tr>
+        <td>  {{ dt1.page_name }}  </td>
+        <td>  {{ dt1.page_cat }}  </td>
+            <td>  {{  dt1.page_publish  }}  </td>
+        <td>  {{  dt1.user.username  }}  </td>
+
+    </tr>
+    {% endfor %}
+    
+    </table>
+
+
+    <table>
+        <tr>
+            <h3> Page by User Email </h3>
+            <th> Page Name </th>
+            <th> Page Category </th>
+            <th> Published Date </th>
+            <th> Created By </th>
+        </tr>
+        
+        {% for dt1 in data3 %}
+        <tr>
+            <td>  {{ dt1.page_name }}  </td>
+            <td>  {{ dt1.page_cat }}  </td>
+                <td>  {{  dt1.page_publish  }}  </td>
+            <td>  {{  dt1.user.username  }}  </td>
+    
+        </tr>
+        {% endfor %}
+        
+        </table>

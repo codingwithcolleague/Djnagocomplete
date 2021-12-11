@@ -1,0 +1,119 @@
+<style>
+    table,td,th {
+        border:1px solid
+    }
+</style>
+
+<table>
+    <tr>
+        <h3> Show All User </h3>
+        <th> Username </th>
+        <th> FirstName </th>
+        <th> LastName </th>
+        <th> Email </th>
+    </tr>
+    
+    {% for dt1 in data1 %}
+    <tr>
+        <td>  {{ dt1.username }}  </td>
+        <td>  {{ dt1.first_name }}  </td>
+            <td>  {{  dt1.last_name  }}  </td>
+        <td>  {{  dt1.email  }}  </td>
+
+    </tr>
+    {% endfor %}
+    
+    </table>
+
+
+    <table>
+        <tr>
+            <h3> User Filter By Email </h3>
+            <th> Username </th>
+            <th> FirstName </th>
+            <th> LastName </th>
+            <th> Email </th>
+        </tr>
+        
+        {% for dt1 in data2 %}
+        <tr>
+            <td>  {{ dt1.username }}  </td>
+            <td>  {{ dt1.first_name }}  </td>
+            <td>  {{  dt1.last_name  }}  </td>
+            <td>  {{  dt1.email  }}  </td>
+    
+        </tr>
+        {% endfor %}
+        
+        </table>
+
+
+        <table>
+            <tr>
+                <h3> User Filter By Category </h3>
+                <th> Username </th>
+                <th> FirstName </th>
+                <th> LastName </th>
+                <th> Email </th>
+            </tr>
+        
+        
+            {% for dt1 in data3 %}
+            <tr>
+                <td>  {{ dt1.username }}     </td>
+                <td>  {{ dt1.first_name }}   </td>
+                <td>  {{  dt1.last_name  }}  </td>
+                <td>  {{  dt1.email  }}      </td>
+        
+            </tr>
+            {% endfor %}
+            
+            
+            </table>
+
+
+            <table>
+                <tr>
+                    <h3> User Filter By Published Date </h3>
+                    <th> Username </th>
+                    <th> FirstName </th>
+                    <th> LastName </th>
+                    <th> Email </th>
+                </tr>
+            
+            
+                {% for dt1 in data3 %}
+                <tr>
+                    <td>  {{ dt1.username }}     </td>
+                    <td>  {{ dt1.first_name }}   </td>
+                    <td>  {{  dt1.last_name  }}  </td>
+                    <td>  {{  dt1.email  }}      </td>
+            
+                </tr>
+                {% endfor %}
+                
+                
+                </table>
+
+<table>
+    <tr>
+        <h3> User Filter By Song Duration </h3>
+        <th> Username </th>
+        <th> FirstName </th>
+        <th> LastName </th>
+        <th> Email </th>
+    </tr>
+
+
+    {% for dt1 in data5 %}
+    <tr>
+        <td>  {{ dt1.username }}     </td>
+        <td>  {{ dt1.first_name }}   </td>
+        <td>  {{  dt1.last_name  }}  </td>
+        <td>  {{  dt1.email  }}      </td>
+
+    </tr>
+    {% endfor %}
+    
+    
+    </table>

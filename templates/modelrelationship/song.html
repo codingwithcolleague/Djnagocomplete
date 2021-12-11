@@ -1,0 +1,18 @@
+<table>
+<tr>
+    <h3> Song Filterd by User username </h3>
+    <th> Song Name </th>
+    <th> Duration by username </th>
+    <th> Writer </th>
+</tr>
+
+{% for dt3 in data5 %}
+<tr>
+    <td>  {{ dt3.song_name }}  </td>
+    <td>  {{ dt3.song_duration }}  </td>
+    <td>  {{  dt3.written_by  }}  </td>
+
+</tr>
+{% endfor %}
+
+</table>
