@@ -28,6 +28,7 @@ urlpatterns = [
     path("customesignal/" , homee ),
     path("middlewarecheck/" , include(("middlewarecheck.urls" , "middlewarecheck") , namespace="middlewarecheck")),
     path("modelchecking/" , include(("modelchecking.urls" , "modelchecking") , namespace="modelchecking")),
+    path("modelmanagerconcept/" , include(("modelmanagerconcept.urls" , "modelmanagerconcept") , namespace="modelmanagerconcept")),
 
 ]
 
