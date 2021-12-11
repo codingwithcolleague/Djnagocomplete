@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     "cookiesession",
     "signaltask",
     "middlewarecheck",
-    "modelchecking"
+    "modelchecking",
+    "modelinheritanceconcept",
+    "modelmanagerconcept",
 ]
 
 MIDDLEWARE = [

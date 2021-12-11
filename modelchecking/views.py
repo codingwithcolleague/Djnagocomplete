@@ -91,11 +91,11 @@ def home(request):
     studentobj = Student.objects.filter(pass_date__week =12)
     studentobj = Student.objects.filter(pass_date__week__gt =12)
     studentobj = Student.objects.filter(pass_date__week_day =1 )
-    studentobj = Student.objects.filter(pass_date__quater=2 )
-    studentobj = Student.objects.filter(pass_date__time__gt=time(21,17) )
-    studentobj = Student.objects.filter(pass_date_time__hour__gt=2 )
-    studentobj = Student.objects.filter(pass_date_time__minute__gt=2 )
-    studentobj = Student.objects.filter(pass_date_time__secound__gt=2 )
+    # studentobj = Student.objects.filter(pass_date__quater=2 )
+    # studentobj = Student.objects.filter(pass_date__time__gt=time(21,17) )
+    # studentobj = Student.objects.filter(pass_date_time__hour__gt=2 )
+    # studentobj = Student.objects.filter(pass_date_time__minute__gt=2 )
+    # studentobj = Student.objects.filter(pass_date_time__secound__gt=2 )
     studentobj = Student.objects.filter(roll__isnull=False )
 
     #Aggregation
