@@ -30,6 +30,7 @@ urlpatterns = [
     path("modelchecking/" , include(("modelchecking.urls" , "modelchecking") , namespace="modelchecking")),
     path("modelmanagerconcept/" , include(("modelmanagerconcept.urls" , "modelmanagerconcept") , namespace="modelmanagerconcept")),
     path("modelrelationship/" , include(("modelrelationship.urls" , "modelrelationship") , namespace="modelrelationship")),
+    path("classbasedvieww/" , include(("classbasedvieww.urls" , "classbasedvieww") , namespace="classbasedvieww")),
 
 ]
 
