@@ -1,6 +1,7 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.views import View
+from django.views.generic.base import TemplateView
 from .form import ContactForm
 
 
@@ -53,3 +54,12 @@ class NewsClass(View):
     def get(self,request):
         context = {"content" : "Hi Siri"} 
         return render(request, self.template_name,context)
+
+class HomeTemplateView(TemplateView):
+    template_name = "classbasedvieww/news.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["name"] = "Rahul"
+        return context
+    
