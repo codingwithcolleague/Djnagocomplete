@@ -1,9 +1,11 @@
+from django.db import models
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.views import View
 from django.views.generic.base import TemplateView
 from .form import ContactForm
-
+from django.views.generic import ListView
+from .models import Student
 
 # Create your views here.
 def home(request):
@@ -63,3 +65,25 @@ class HomeTemplateView(TemplateView):
         context["name"] = "Rahul"
         return context
     
+
+#Generic Class Based View
+
+class StudentListView(ListView):
+    model = Student
+    template_name = "classbasedvieww/student_list.html"
+    context_object_name = "students"
+
+    def get_queryset(self):
+        return Student.objects.filter(name__startswith="R")
+
+    def get_context_data(self, *args,**kwargs):
+        context = super().get_context_data(*args,**kwargs)
+        context["fresher"] = Student.objects.all().order_by("name")
+        return context
+
+    def get_template_names(self):
+        if self.request.COOKIES.get("users") == "sonam":
+            template_name = "classbasedvieww/sonam.html"
+        else:
+            template_name = self.template_name
+        return [template_name]

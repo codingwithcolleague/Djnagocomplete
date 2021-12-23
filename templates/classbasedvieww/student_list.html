@@ -1,0 +1,20 @@
+<h1> Student List </h1>
+<hr/>
+
+{% comment %} 
+{%  for  i in student_list %}
+ <p>   {{ i.name }} </p>
+{% endfor %} {% endcomment %}
+
+
+{%  for  i in students %}
+ <p>   {{ i.name }} </p>
+{% endfor %}
+
+<hr/>
+<h4> Fresher </h4>
+
+<hr/>
+{% for k in fresher %}
+<p>   {{ k.name }} </p>
+{% endfor %}
