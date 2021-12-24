@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views import View
 from django.views.generic.base import TemplateView
 from .form import ContactForm
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
 from .models import Student
 
 # Create your views here.
@@ -87,3 +87,15 @@ class StudentListView(ListView):
         else:
             template_name = self.template_name
         return [template_name]
+
+
+class StudentDeatilsView(DetailView):
+    model = Student
+    template_name ="classbasedvieww/student_detail.html"
+    context_object_name = "stu"
+    pk_url_kwarg = "pkk"
+
+    def get_context_data(self,*args ,**kwargs):
+        context =  super().get_context_data(*args,**kwargs)
+        context["all_student"] = self.model.objects.all()
+        return context

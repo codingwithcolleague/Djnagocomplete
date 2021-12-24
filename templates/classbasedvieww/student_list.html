@@ -16,5 +16,5 @@
 
 <hr/>
 {% for k in fresher %}
-<p>   {{ k.name }} </p>
+<a  href="{% url 'classbasedvieww:studentdetail' k.id  %}"  >   {{ k.name }} </a> <br/>
 {% endfor %}

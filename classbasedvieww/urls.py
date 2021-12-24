@@ -5,7 +5,7 @@ from django.views.generic.base import RedirectView
 from .views import (home,MyClass,MyLoveClass,ContactClass,HomeTemplateView,
             contactFunction,newsLife,NewsClass,
             
-        StudentListView
+        StudentListView,StudentDeatilsView
     )
 
 urlpatterns = [
@@ -21,6 +21,8 @@ urlpatterns = [
 
 
 
-    path('studentlist/' , StudentListView.as_view() , name="studentlist")
+    path('studentlist/' , StudentListView.as_view() , name="studentlist"),
+    path('studentdetails/<int:pkk>' , StudentDeatilsView.as_view() , name="studentdetail")
+
 
 ]
