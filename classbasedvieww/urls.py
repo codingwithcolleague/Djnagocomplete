@@ -2,10 +2,13 @@
 from django.conf.urls import url
 from django.urls import path
 from django.views.generic.base import RedirectView
+
+from classbasedvieww.form import ContactForm
 from .views import (home,MyClass,MyLoveClass,ContactClass,HomeTemplateView,
             contactFunction,newsLife,NewsClass,
             
-        StudentListView,StudentDeatilsView
+        StudentListView,StudentDeatilsView,ContractFormView,thankyou,StudentCreateView,
+        StudentFormCreateView,StudentFormUpdateView,StudentDeleteView
     )
 
 urlpatterns = [
@@ -22,7 +25,13 @@ urlpatterns = [
 
 
     path('studentlist/' , StudentListView.as_view() , name="studentlist"),
-    path('studentdetails/<int:pkk>' , StudentDeatilsView.as_view() , name="studentdetail")
+    path('studentdetails/<int:pk>' , StudentDeatilsView.as_view() , name="studentdetails"),
+    path('contactview/' , ContractFormView.as_view() , name="contactview"),
+    path('thankyou/' , thankyou , name="thankyou"),
+    path('studentcreate/' , StudentCreateView.as_view() , name="studentcreate"),
+    path('studentformcreate/' , StudentFormCreateView.as_view() , name="studentformcreate"),
+    path('studentformupdate/<int:pk>' , StudentFormUpdateView.as_view() , name="studentformupdate"),
+    path('studentdelete/<int:pk>' , StudentDeleteView.as_view() , name="studentdelete")
 
 
 ]

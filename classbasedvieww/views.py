@@ -3,9 +3,13 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.views import View
 from django.views.generic.base import TemplateView
+from django.views.generic import CreateView
 from .form import ContactForm
 from django.views.generic import ListView,DetailView
 from .models import Student
+from django.views.generic import FormView
+from .form import StudentModelForm
+from django.views.generic import UpdateView,DeleteView
 
 # Create your views here.
 def home(request):
@@ -93,9 +97,44 @@ class StudentDeatilsView(DetailView):
     model = Student
     template_name ="classbasedvieww/student_detail.html"
     context_object_name = "stu"
-    pk_url_kwarg = "pkk"
+    pk_url_kwarg = "pk"
 
     def get_context_data(self,*args ,**kwargs):
         context =  super().get_context_data(*args,**kwargs)
         context["all_student"] = self.model.objects.all()
         return context
+
+
+class ContractFormView(FormView):
+    template_name = "classbasedvieww/contactview.html"
+    form_class = ContactForm
+    success_url = "/classbasedvieww/thankyou/"
+
+    def form_valid(self, form):
+        name = form.cleaned_data["name"]
+        print(name)
+        return super().form_valid(form)
+
+
+class StudentCreateView(CreateView):
+    model = Student
+    fields = ["name","rollno","emailId","mobileno","passout","passoutdate"]
+    template_name = "classbasedvieww/studentcreate.html"
+
+class StudentFormCreateView(CreateView):
+    form_class = StudentModelForm
+    template_name = "classbasedvieww/studentcreate.html"
+
+class StudentFormUpdateView(UpdateView):
+    model = Student
+    form_class = StudentModelForm
+    template_name = "classbasedvieww/studentcreate.html"
+
+
+class StudentDeleteView(DeleteView):
+    model = Student
+    success_url = "/classbasedvieww/thankyou/"
+
+
+def thankyou(request):
+    return HttpResponse("Thank You So MuCH")
