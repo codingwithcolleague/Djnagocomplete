@@ -31,6 +31,9 @@ urlpatterns = [
     path("modelmanagerconcept/" , include(("modelmanagerconcept.urls" , "modelmanagerconcept") , namespace="modelmanagerconcept")),
     path("modelrelationship/" , include(("modelrelationship.urls" , "modelrelationship") , namespace="modelrelationship")),
     path("classbasedvieww/" , include(("classbasedvieww.urls" , "classbasedvieww") , namespace="classbasedvieww")),
+    path("authorizations/" , include(("authorizations.urls" , "authorizations") , namespace="authorizations")),
+    path('accounts/' , include('django.contrib.auth.urls')),
+    path('accounts/' , include(("authorizations.urls" , "authorizations") , namespace="authorizations"))
 
 ]
 

@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     "modelinheritanceconcept",
     "modelmanagerconcept",
     "modelrelationship",
-    "classbasedvieww"
+    "classbasedvieww",
+    "authorizations"
 ]
 
 MIDDLEWARE = [
